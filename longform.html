@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Form</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        td, th { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f2f2f2; }
+        input, select, textarea { width: 100%; padding: 5px; }
+        .optional-info { margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Basic Info</h2>
+        <table>
+            <tr>
+                <td>Employee ID</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td><input type="text" value="Dodsworth"></td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td><input type="text" value="Anne"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="male" checked> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    <input type="radio" name="gender" value="xxx"> XXX
+                </td>
+            </tr>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" value="Sales Representative"></td>
+            </tr>
+            <tr>
+                <td>Suffix</td>
+                <td><input type="text" value="Ms."></td>
+            </tr>
+            <tr>
+                <td>BirthDate</td>
+                <td><input type="datetime-local" value="1969-07-02 00:00:00"></td>
+            </tr>
+            <tr>
+                <td>HireDate</td>
+                <td><input type="datetime-local" value="1994-11-15 00:00:00"></td>
+            </tr>
+            <tr>
+                <td>SSN # (if applicable)</td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Reports To</td>
+                <td><select name="reportsTo">
+    <option value="buchanan">Buchanan</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+</select></td>
+            </tr>
+        </table>
+
+        <h2>Contact Info</h2>
+        <table>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" value="name@example.com"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" value="7 Houndstooth Rd."></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td><input type="text" value="London"></td>
+            </tr>
+            <tr>
+                <td>Region</td>
+                <td><input type="text" value=""></td>
+            </tr>
+            <tr>
+                <td>Postal Code</td>
+                <td><input type="text" value="WG2 7LT"></td>
+            </tr>
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select>
+                        <option value="Russian Federation">Russian Federation</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>US Home Phone</td>
+                <td><input type="text" value="(234)234-2342"></td>
+            </tr>
+            <tr>
+                <td>Photo</td>
+                <td><input type="text" value="EmpID9.bmp"></td>
+            </tr>
+        </table>
+
+        <div class="optional-info">
+            <h2>Optional Info</h2>
+            <textarea rows="4" cols="50">
+Anne has a BA in English from St. Lawrence College.
+She is fluent in French and German ZZZ
+            </textarea>
+            <br><br>
+            <label>Preferred Shift:</label>
+            <input type="checkbox" name="shift" value="regular" checked> Regular
+            <input type="checkbox" name="shift" value="graveyard"> Graveyard
+            <input type="checkbox" name="shift" value="active"> Active
+            <input type="text" value="TIDAWO">
+            <br><br>
+            <label>Are you human?</label>
+            <input type="text" value="" placeholder="Click to change">
+        </div>
+            <br><br>
+
+        <button type="submit">Submit</button>
+        <button type="button">Cancel</button>
+    </form>
+</body>
+</html>
