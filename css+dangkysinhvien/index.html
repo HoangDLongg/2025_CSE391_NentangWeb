@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Sinh Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dangkysinhvien">
+        <h1>Đăng Ký Sinh Viên</h1>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="ho_ten">Họ và tên:</label>
+                <input type="text" id="ho_ten" name="ho_ten" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ngay_sinh">Ngày sinh:</label>
+                <input type="date" id="ngay_sinh" name="ngay_sinh" required>
+            </div>
+
+             <div class="form-group">
+                <label for="gioi_tinh">Giới tính:</label>
+                <select id="gioi_tinh" name="gioi_tinh">
+                    <option value="nam">Nam</option>
+                    <option value="nu">Nữ</option>
+                    <option value="khac">Khác</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="khoa_hoc">Khóa học:</label>
+                <input type="text" id="khoa_hoc" name="khoa_hoc">
+            </div>
+
+            <div class="form-group">
+                <label for="so_dien_thoai">Số điện thoại:</label>
+                <input type="tel" id="so_dien_thoai" name="so_dien_thoai">
+            </div>
+
+            <div class="form-group">
+                <label for="dia_chi">Địa chỉ:</label>
+                <textarea id="dia_chi" name="dia_chi"></textarea>
+            </div>
+
+            <div class="form-group">
+                <button type="submit">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+    <div class="listsinhvien">
+        <h2 style="text-align: center;">Thông tin đã đăng ký</h2>
+        <table border="1" cellpadding="5" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>Họ và tên</th>
+                    <th>Email</th>
+                    <th>Ngày sinh</th>
+                    <th>Giới tính</th>
+                    <th>Khóa học</th>
+                    <th>Số điện thoại</th>
+                    <th>Địa chỉ</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@example.com</td>
+                    <td>2000-01-01</td>
+                    <td>Nam</td>
+                    <td>Công nghệ thông tin</td>
+                    <td>0123456789</td>
+                    <td>Hà Nội</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@example.com</td>
+                    <td>2000-01-01</td>
+                    <td>Nam</td>
+                    <td>Công nghệ thông tin</td>
+                    <td>0123456789</td>
+                    <td>Hà Nội</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@example.com</td>
+                    <td>2000-01-01</td>
+                    <td>Nam</td>
+                    <td>Công nghệ thông tin</td>
+                    <td>0123456789</td>
+                    <td>Hà Nội</td>
+                </tr>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@example.com</td>
+                    <td>2000-01-01</td>
+                    <td>Nam</td>
+                    <td>Công nghệ thông tin</td>
+                    <td>0123456789</td>
+                    <td>Hà Nội</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

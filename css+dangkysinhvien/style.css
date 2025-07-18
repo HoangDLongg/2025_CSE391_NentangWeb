@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:rgba(23, 7, 253, 0.1);
+}
+.dangkysinhvien {
+    background-color: rgb(208, 208, 224);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    margin: 20px auto; 
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* listsinhvien */
+.listsinhvien {
+    margin-top: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.listsinhvien h2 {
+    color: #1168b9;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0d3081;
+    padding-bottom: 10px;
+}
+
+.listsinhvien table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.listsinhvien th,
+.listsinhvien td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.listsinhvien th {
+    background-color:#1168b9;
+    color: white;
+    font-weight: bold;
+}
+
+.listsinhvien tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.listsinhvien tr:hover {
+    background-color: #f5f5f5;
+}
+
+.listsinhvien td {
+    color: #555;
+}
