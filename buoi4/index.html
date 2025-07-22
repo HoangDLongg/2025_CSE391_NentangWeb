@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buoi 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1> Hệ Thống Quản Lý Sinh Viên</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buoi1/index.html">Buoi 1</a></li>
+            <li><a href="buoi2/index.html">Buoi 2</a></li>
+            <li><a href="buoi3/index.html">Buoi 3</a></li>
+            <li><a href="buoi4/index.html">Buoi 4</a></li>
+        </ul>
+    </nav>
+    <div class="main-container">
+        <div class="form-section">
+            <h2> Đăng Ký Sinh Viên</h2>
+            
+            <p>Vui lòng điền đầy đủ thông tin dưới đây để đăng ký sinh viên mới.</p>
+            
+            <form id="studentForm">
+                <div class="form-group">
+                    <label for="ho_ten">
+                        Họ và tên <span class="required">*</span>
+                    </label>
+                    <input type="text" id="ho_ten" name="ho_ten" required 
+                           placeholder="Nhập họ và tên đầy đủ">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">
+                        Email <span class="required">*</span>
+                    </label>
+                    <input type="email" id="email" name="email" required 
+                           placeholder="example@email.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="ngay_sinh">
+                        Ngày sinh <span class="required">*</span>
+                    </label>
+                    <input type="date" id="ngay_sinh" name="ngay_sinh" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="gioi_tinh">Giới tính</label>
+                    <select id="gioi_tinh" name="gioi_tinh">
+                        <option value="Nam"> Nam</option>
+                        <option value="Nữ"> Nữ</option>
+                        <option value="Khác">🏳️ Khác</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="khoa_hoc">Khóa học</label>
+                    <input type="text" id="khoa_hoc" name="khoa_hoc" 
+                           placeholder="Ví dụ: Công nghệ thông tin">
+                </div>
+
+                <div class="form-group">
+                    <label for="so_dien_thoai">Số điện thoại</label>
+                    <input type="tel" id="so_dien_thoai" name="so_dien_thoai" 
+                           placeholder="0123456789">
+                </div>
+
+                <div class="form-group">
+                    <label for="dia_chi">Địa chỉ</label>
+                    <textarea id="dia_chi" name="dia_chi" 
+                              placeholder="Nhập địa chỉ chi tiết"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    <span id="submitText">Đăng Ký Sinh Viên</span>
+                    <div id="loadingSpinner" class="loading" style="display: none;"></div>
+                </button>
+            </form>
+        </div>
+        <div class="table-section">
+            <h2> Danh Sách Sinh Viên</h2>
+            
+            <div class="stats">
+                 Tổng số sinh viên: <span id="studentCount">1</span>
+            </div>
+            
+            <div class="table-container">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th> Họ và tên</th>
+                            <th> Email</th>
+                            <th> Ngày sinh</th>
+                            <th> Giới tính</th>
+                            <th> Khóa học</th>
+                            <th> Số ĐT</th>
+                            <th> Địa chỉ</th>
+                            <th> Thao tác</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <tr>
+                            <td>Nguyễn Văn A</td>
+                            <td>nguyenvana@example.com</td>
+                            <td>01/01/2000</td>
+                            <td>Nam</td>
+                            <td>Công nghệ thông tin</td>
+                            <td>0123456789</td>
+                            <td>Hà Nội</td>
+                            <td>
+                                <button class="btn btn-danger" onclick="deleteStudent(this)">
+                                     Xóa
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
