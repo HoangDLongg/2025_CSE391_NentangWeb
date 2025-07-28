@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TLU</div>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Employees</a>
+            </div>
+        </nav>
+        <div class="search">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="page-header">
+            <h1>Manage Employees</h1>
+            <div class="page-header-actions">
+                <button class="delete-employee-button">Delete</button>
+                <button class="add-employee-button">Add New Employee</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" class="checkbox"></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>Hoang Duc Long</td>
+                        <td>hoang.duc.long@example.com</td>
+                        <td>TaySon</td>
+                        <td>0992299922</td>
+                        <td>
+                            <button class="edit-employee-button">Edit</button>
+                            <button class="delete-employee-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>Hoang Duc Long</td>
+                        <td>hoang.duc.long@example.com</td>
+                        <td>TaySon</td>
+                        <td>0992299922</td>
+                        <td>
+                            <button class="edit-employee-button">Edit</button>
+                            <button class="delete-employee-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>Hoang Duc Long</td>
+                        <td>hoang.duc.long@example.com</td>
+                        <td>TaySon</td>
+                        <td>0992299922</td>
+                        <td>
+                            <button class="edit-employee-button">Edit</button>
+                            <button class="delete-employee-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>Hoang Duc Long</td>
+                        <td>hoang.duc.long@example.com</td>
+                        <td>TaySon</td>
+                        <td>0992299922</td>
+                        <td>
+                            <button class="edit-employee-button">Edit</button>
+                            <button class="delete-employee-button">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="checkbox"></td>
+                        <td>Hoang Duc Long</td>
+                        <td>hoang.duc.long@example.com</td>
+                        <td>TaySon</td>
+                        <td>0992299922</td>
+                        <td>
+                            <button class="edit-employee-button">Edit</button>
+                            <button class="delete-employee-button">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="table-footer">
+                <p>Showing 5 out of 25 entries</p>
+                <div class="pagination">
+                    <button disabled>Previous</button>
+                    <button>1</button>
+                    <button class="active">2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="addEmployeeModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Employee</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="addEmployeeForm">
+                    <div class="form-group">
+                        <label for="employee_name">
+                            Full Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="employee_name" name="employee_name" required 
+                               placeholder="Enter full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employee_email">
+                            Email <span class="required">*</span>
+                        </label>
+                        <input type="email" id="employee_email" name="employee_email" required 
+                               placeholder="example@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employee_address">
+                            Address <span class="required">*</span>
+                        </label>
+                        <input type="text" id="employee_address" name="employee_address" required 
+                               placeholder="Enter address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employee_phone">
+                            Phone Number <span class="required">*</span>
+                        </label>
+                        <input type="tel" id="employee_phone" name="employee_phone" required 
+                               placeholder="0123456789">
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelAdd">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Add Employee
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
