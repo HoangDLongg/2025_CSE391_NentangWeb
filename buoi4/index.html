@@ -5,17 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buoi 4</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <nav class="navbar">
         <h1> Hệ Thống Quản Lý Sinh Viên</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="buoi1/index.html">Buoi 1</a></li>
-            <li><a href="buoi2/index.html">Buoi 2</a></li>
-            <li><a href="buoi3/index.html">Buoi 3</a></li>
-            <li><a href="buoi4/index.html">Buoi 4</a></li>
-        </ul>
+        
     </nav>
     <div class="main-container">
         <div class="form-section">
@@ -111,13 +107,88 @@
                             <td>0123456789</td>
                             <td>Hà Nội</td>
                             <td>
-                                <button class="btn btn-danger" onclick="deleteStudent(this)">
+                                <button class="btn btn-danger" id="deleteButton" onclick="deleteStudent(this)">
                                      Xóa
+                                </button>
+                                <button class="btn btn-danger" id="editButton" onclick="editStudent(this)">
+                                     Sửa
                                 </button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal sửa sinh viên -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Sửa Thông Tin Sinh Viên</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="editStudentForm">
+                    <div class="form-group">
+                        <label for="edit_ho_ten">
+                            Họ và tên <span class="required">*</span>
+                        </label>
+                        <input type="text" id="edit_ho_ten" name="edit_ho_ten" required 
+                               placeholder="Nhập họ và tên đầy đủ">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit_email">
+                            Email <span class="required">*</span>
+                        </label>
+                        <input type="email" id="edit_email" name="edit_email" required 
+                               placeholder="example@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit_ngay_sinh">
+                            Ngày sinh <span class="required">*</span>
+                        </label>
+                        <input type="date" id="edit_ngay_sinh" name="edit_ngay_sinh" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit_gioi_tinh">Giới tính</label>
+                        <select id="edit_gioi_tinh" name="edit_gioi_tinh">
+                            <option value="Nam">👨 Nam</option>
+                            <option value="Nữ">👩 Nữ</option>
+                            <option value="Khác">🏳️ Khác</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit_khoa_hoc">Khóa học</label>
+                        <input type="text" id="edit_khoa_hoc" name="edit_khoa_hoc" 
+                               placeholder="Ví dụ: Công nghệ thông tin">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit_so_dien_thoai">Số điện thoại</label>
+                        <input type="tel" id="edit_so_dien_thoai" name="edit_so_dien_thoai" 
+                               placeholder="0123456789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit_dia_chi">Địa chỉ</label>
+                        <textarea id="edit_dia_chi" name="edit_dia_chi" 
+                                  placeholder="Nhập địa chỉ chi tiết"></textarea>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelEdit">
+                            ❌ Hủy
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            ✅ Cập nhật
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
