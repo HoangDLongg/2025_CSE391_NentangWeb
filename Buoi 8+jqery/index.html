@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Giao Dịch - TLU</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- jQuery Validate -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <!-- jQuery Validate Messages (Vietnamese) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/localization/messages_vi.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Trường đại học Thủy Lợi</div>
+        </nav>
+        <div class="search">
+            <a href="">Trang chủ</a>
+            <a href="">Quản lý cửa hàng</a>
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </header>
+    <div class="main-content">
+        <div class="content">
+            <div class="add">
+                <button class="add-button">THÊM</button>
+                <button class="output">XUẤT RA FILE</button>
+            </div>
+            <div class="find">
+                <input type="text" class="find-input" placeholder="Tìm kiếm...">
+                <button class="find-button">Tìm</button>
+            </div>
+            <p>Kết quả tìm kiếm: </p>
+        </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="checkbox-cell">
+                        <input type="checkbox" id="selectAll">
+                    </th>
+                    <th>Hành động</th>
+                    <th>ID <span class="sort-arrow">▼</span></th>
+                    <th>Khách hàng <span class="sort-arrow">▼</span></th>
+                    <th>Nhân viên <span class="sort-arrow">▼</span></th>
+                    <th>Số tiền <span class="sort-arrow">▼</span></th>
+                    <th>Ngày mua <span class="sort-arrow">▼</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="selected-row">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" checked>
+                    </td>
+                    <td>
+                        <div class="actions-cell">
+                            <button class="action-btn view-btn" title="Xem">👁</button>
+                            <button class="action-btn edit-btn" title="Sửa">✏</button>
+                            <button class="action-btn delete-btn" title="Xóa">🗑</button>
+                        </div>
+                    </td>
+                    <td>1102</td>
+                    <td>Võ Hoài An</td>
+                    <td>Mai Thục Anh</td>
+                    <td class="money">250.000</td>
+                    <td>06 Tháng 6 2024 9:00</td>
+                </tr>
+                <tr class="selected-row">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" checked>
+                    </td>
+                    <td>
+                        <div class="actions-cell">
+                            <button class="action-btn view-btn" title="Xem">👁</button>
+                            <button class="action-btn edit-btn" title="Sửa">✏</button>
+                            <button class="action-btn delete-btn" title="Xóa">🗑</button>
+                        </div>
+                    </td>
+                    <td>1199</td>
+                    <td>Hoàng Thị Thắng</td>
+                    <td>Nguyễn Văn Hồng</td>
+                    <td class="money">600.000</td>
+                    <td>06 Tháng 6 2024 9:03</td>
+                </tr>
+                <tr class="selected-row">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" checked>
+                    </td>
+                    <td>
+                        <div class="actions-cell">
+                            <button class="action-btn view-btn" title="Xem">👁</button>
+                            <button class="action-btn edit-btn" title="Sửa">✏</button>
+                            <button class="action-btn delete-btn" title="Xóa">🗑</button>
+                        </div>
+                    </td>
+                    <td>1239</td>
+                    <td>Nguyễn Huy Quang</td>
+                    <td>Nguyễn Văn Hồng</td>
+                    <td class="money">934.000</td>
+                    <td>06 Tháng 6 2024 9:10</td>
+                </tr>
+                <tr class="selected-row">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" checked>
+                    </td>
+                    <td>
+                        <div class="actions-cell">
+                            <button class="action-btn view-btn" title="Xem">👁</button>
+                            <button class="action-btn edit-btn" title="Sửa">✏</button>
+                            <button class="action-btn delete-btn" title="Xóa">🗑</button>
+                        </div>
+                    </td>
+                    <td>1677</td>
+                    <td>Huỳnh Văn Nam</td>
+                    <td>Mai Thục Anh</td>
+                    <td class="money">150.000</td>
+                    <td>06 Tháng 6 2024 9:20</td>
+                </tr>
+                <tr class="selected-row">
+                    <td class="checkbox-cell">
+                        <input type="checkbox" checked>
+                    </td>
+                    <td>
+                        <div class="actions-cell">
+                            <button class="action-btn view-btn" title="Xem">👁</button>
+                            <button class="action-btn edit-btn" title="Sửa">✏</button>
+                            <button class="action-btn delete-btn" title="Xóa">🗑</button>
+                        </div>
+                    </td>
+                    <td>1439</td>
+                    <td>Nguyễn Hồng Minh</td>
+                    <td>Mai Thục Anh</td>
+                    <td class="money">354.000</td>
+                    <td>06 Tháng 6 2024 9:24</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <button class="delete-selected">🗑 DELETE SELECTED RECORDS</button>
+        <div class="pagination">
+        <div class="pagination-left">
+            <span>Trang</span>
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn">4</button>
+            <button class="page-btn">5</button>
+            <button class="page-btn">6</button>
+            <button class="page-btn">></button>
+            <button class="page-btn">>></button>
+        </div>
+        <div class="pagination-right">
+            <span>Kết quả 1</span>
+        </div>
+    </div>
+    </div>
+    
+
+    <footer>
+        <p>TRƯỜNG ĐẠI HỌC THỦY LỢI</p>
+        <p>Địa chỉ: 175 Tây Sơn, Đống Đa, Hà Nội</p>
+        <p>Điện thoại: 0123456789</p>
+        <p>Email: phonghcth@tlu.edu.vn</p>
+    </footer>
+    <div id="Addhoadon" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Thêm giao dịch</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">    
+                <form id="themhoadon">
+                    <div class="form-group">
+                        <label for="khachhang">
+                            Tên khách hàng <span class="required">*</span>
+                        </label>
+                        <input type="text" id="khachhang" name="khachhang" required
+                               placeholder="Nhập tên khách hàng" minlength="2" maxlength="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nhanvien">
+                            Tên nhân viên <span class="required">*</span>
+                        </label>
+                        <input type="text" id="nhanvien" name="nhanvien" required
+                               placeholder="Nhập tên nhân viên" minlength="2" maxlength="50">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sotien">
+                            Số tiền <span class="required">*</span>
+                        </label>
+                        <input type="number" id="sotien" name="sotien" required
+                               placeholder="Nhập số tiền" min="1000" max="999999999">
+                    </div>
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="cancelAdd">
+                            Hủy
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            Thêm hóa đơn
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
